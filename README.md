@@ -102,14 +102,7 @@ We are not required to supply terms because we are not running a service. Howeve
 
 Contributions via pull request are very welcome, as are issues logged via the GitHub issue tracker. You can also suggest features, such as metrics you'd like to see, UI upgrades, etc.
 
-Also, please note that development of this project was done piece-wise, and there are many commits with very little added, as a commit was required in order to test any code change.
-
-Finally, as mentioned in the [discussion](/docs/discussion.md), this project is not intended as a customer ready solution, it is a kind of "hobby grade" project. As such, **do not expect consumer level support**.
-
-## Note
-
-In the next minor version of Voter the Redis database will be changed for a 
-MongoDB database.
+Finally, as mentioned in the [discussion](/docs/discussion.md), this project is not intended as a customer ready solution, it is a kind of "hobby grade" project. As such, **do not expect consumer level support**..
 
 ## Changelog
 
