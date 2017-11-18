@@ -1,28 +1,24 @@
-# Voter
+# Prosper-ai Upvote/Curation Bot
 
 <img src="/img/voter-banner-150.png" alt="Voter logo" style="width: 150px; height: 150px"/>
 
-A Steem FOSSbot, by [personz](https://steemit.com/@personz)
+A Steem bot, by [personz](https://steemit.com/@personz)
 
-Full documentation is [available here](/docs/index.md).
+Forked and edited by me [Nolyoly]{https://steemit.com/@noly)
 
 ## Project goal
 
 The goal of this project is to bring a high quality and fully customisable bot to anyone who is willing to put in the time to set up a simple server and make their own customisations.
 
-For more information, see the [discussion doc page](/docs/discussion.md).
-
 ## What is this?
 
-_Voter_ is a bot for Steem which decides which posts to vote for and casts votes on behalf of a registered user. It is built as a Node.js server and intended for deployment on Heroku, with other installation options planned.
+Prosper-ai is a bot for Steem which decides which posts to vote for and casts votes on behalf of a registered user. It is built as a Node.js server and intended for deployment on Heroku, with other installation options planned.
 
 This means _you own the server_ and control it completely. There are no fees or catches, the software is free to use. You create a unique API key for your own access, and for granting access to others if you wish.
 
-You control the running of the bot, set the algorithm and view stats and logs with a simple web dashboard, which will be live at your Heroku URL. See [Usage](https://github.com/Steem-FOSSbot/steem-fossbot-voter#usage) below for more details.
+You control the running of the bot, set the algorithm and view stats and logs with a simple web dashboard, which will be live at your Heroku URL. See [Usage] below for more details.
 
-A plugin system has been proposed and will hopefully be implemented. Please refer to [the ticket](https://github.com/Steem-FOSSbot/project-tracker/issues/8) on the main [Steem FOSSbot organization project-tracker](https://github.com/Steem-FOSSbot/project-tracker) for more information. 
-
-Lastly, check out [our ethos](/docs/ethos.md). Bots can be a divisive subject and this document clearly lays out our position.
+A plugin system has been proposed and will hopefully be implemented. Please refer to [the ticket](https://github.com/Steem-FOSSbot/project-tracker/issues/8) on the main [Steem FOSSbot organization project-tracker](https://github.com/Steem-FOSSbot/project-tracker) for more information (this will hopefully be completed by the Foss group. If not I will try my best to implement the plugin feature). 
 
 ## How it works
 
