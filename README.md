@@ -1,51 +1,40 @@
 # Prosper-ai Upvote/Curation Bot
-
-<img src="/img/voter-banner-150.png" alt="Voter logo" style="width: 150px; height: 150px"/>
-
 A Steem bot, by [personz](https://steemit.com/@personz)
 
-Forked and development continuation by me/[Nolyoly](https://steemit.com/@noly)
+Forked by [Nolyoly](https://steemit.com/@noly) to continue development of this project.
 
-## Project goal
+## About the Prosper-ai Project
+Prosper-ai is a bot built with Node.JS for the Steemit social network. It decides which posts to vote for and casts votes on behalf of a registered user. 
 
-The goal of this project is to bring a high quality and fully customisable bot to anyone who is willing to put in the time to set up a simple server and make their own customisations.
+This project is also made open-source with documentation on how to set it up on your own server. This means that you too can set up your own bot to run seperately from our Prosper-ai project. You own the server and control it 100%. You control the running of the bot, set the algorithm configuration, and view stats and logs with a simple web dashboard. This will all be available at your Heroku URL. See [Usage] below for more details.
 
-## What is this?
+___Note:___ A plugin system was proposed on the original Fossbot project but never seemed to come to fruition. I will be investigating whether or not any of this was completed. I will be doing my best to try and implement this feature as it could bring a lot more functionality to this script.
 
-Prosper-ai is a bot for Steem which decides which posts to vote for and casts votes on behalf of a registered user. It is built as a Node.js server and intended for deployment on Heroku, with other installation options planned.
+## Prosper's Goal
+The goal of this project is to develop a high quality Steemit bot to bring rewards to great content creators as well as generating curation rewards for votes cast. This is done by manualling adding authors to the bots upvote list. This can further be limited by the various configuration settings to determine a posts quality (more info below). Curation rewards are targeted by setting the time at which the bot votes after a post is made and by setting the percentages.
 
-This means _you own the server_ and control it completely. There are no fees or catches, the software is free to use. You create a unique API key for your own access, and for granting access to others if you wish.
+Also, by keeping this code open source and well documented, we make it easy for anyone who wishes to fork this project and make it their own, or simply copy it and use it the way they would like!
 
-You control the running of the bot, set the algorithm and view stats and logs with a simple web dashboard, which will be live at your Heroku URL. See [Usage] below for more details.
-
-A plugin system has been proposed and will hopefully be implemented. Please refer to [the ticket](https://github.com/Steem-FOSSbot/project-tracker/issues/8) on the main [Steem FOSSbot organization project-tracker](https://github.com/Steem-FOSSbot/project-tracker) for more information (this will hopefully be completed by the Foss group. If not I will try my best to implement the plugin feature). 
-
-## How it works
-
-The bot works by scoring each new post using a collection of rules which are set by you. If a post scores above a threshold, it is voted for. The threshold is automatically adjusted based on a raised average of recent posts, and is also proportional to the number of votes in the last 24 hours, to keep votes per day at around a max of 40 (by default).
+## How Prosper-ai Works
+The bot works by scoring each new post using a collection of rules which are set by you. If a post scores above a threshold, it is voted for. The threshold is automatically adjusted based on a raised average of recent posts, and is also proportional to the number of votes in the last 24 hours, to keep votes per day at around a max of 40 by default (thid can be changed by editing the configuration of the bot).
 
 Rules are based on a collection of metrics which this app interprets from raw Steem data. For example, you could add 10 score points for every image, or deduct 2 points for every minute since the post was created.
 
-These rules, called an algorithm, are editable through the server app Dashboard, and you can also view run statistics, logs and tests here.
+These rules, called an algorithm, are editable through the server app Dashboard, and you can also view, run statistics, logs, and tests here.
 
 The server is designed to be triggered periodically for a bot run iteration, for example every 30 or 60 minutes. This can be done on Heroku with an add-on, or manually on the dashboard provided, or even by a HTTP GET method to ```/run-bot?json=true&api_key=BOT_API_KEY``` endpoint, which is used internally and can be used externally by a separate app.
 
-Please see the [discussion doc page](/docs/discussion.md) for in depth details on the curation algorithm and how to use it to create a custom bot, as well as a discussion on bots on Steem in general. For technical details see the [algorithm and metrics doc page](/docs/algorithm.md).
-
 ## Usage
-
 Open the bot dashboard using your Heroku app root URL, as above. All operations are available through the dashboard.
 
 The operations you can perform are:
 
 - Run bot now (WILL VOTE)
-- Check bot stats (this is pretty cool)
+- Check bot stats
 - Edit curation algorithm weights and white / black lists
 - Edit configuration and settings of bot
 - Run algorithm test (does not actually vote)
 - View last log
-
-For more detail on the dashboard (and more screen shots!), see the [dashboard overview doc](/docs/dashboard-overview.md)
 
 _Dashboard with active session_
 
@@ -58,20 +47,26 @@ _Stats for post metrics breakdown_
 ![](/img/bot-run-overview-2.png)
 
 ## Installation
+See the [installation guide](/docs/installation.md). 
 
-See the [installation guide](/docs/installation.md), but if you want to jump right in then you can deploy this server to Heroku with one click.
+Alternatively, you can deploy this server to Heroku with one click. [![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy?template=https://github.com/nolyoly/prosper-ai-node)
 
-[![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy?template=https://github.com/Steem-FOSSbot/steem-fossbot-voter)
+Be sure to read through the Heroku website. Check on their pricing (they offer a free account), features, terms of service, acceptable use policy, and other information available on their site.
 
-Make sure to read the instructions though! Heroku has a basic free plan but if not familiar with their service you will want to read their terms, privacy policy, etc.
-
-## Update
-
+## Keep your bot up to date
 Please see also the [installation guide](/docs/installation.md) for instructions on how to keep your server up to date with further releases of Voter.
 
-## License and acknowledgements
+## Footnotes
+See [the license](/LICENSE) for full legal text. You are at your own liability if you use this software. We are not running a service and therefore are not required to provide a terms of service policy.
 
+Contributions via pull request are very welcome, as are issues logged via the GitHub issue tracker. You can also suggest features, such as metrics you'd like to see, UI upgrades, etc. We encourage these submissions to be submitted via [Utopian.io](https://utopian.io/) though! It is another great Steem project that rewards open-source developers for all of their hard work. ;)
+
+I hope to revitalize this project with the help of the Steem community to make bot voting great again as we have recently seen a lot of backlash from some whales in the Steemit community. Our goal isn't to make anyone money, but to help good content creators get recognized and receive the credit they deserve for their hard work!
+
+## License and acknowledgements
 All original programming is under the CC0 license and thus completely open and free to use in any capacity. It's in the spirit of the project that it is open to all.
+
+Credit for the original Fossbot is to [personz](https://steemit.com/@personz) and [Steem-FOSSbot)(https://github.com/Steem-FOSSbot). I have just forked this project since it seems to have been abandoned and I believe it has great potential and thus should continue to be developed.
 
 Included in this repo are the following libraries, and all licenses are in the root folder of the project, except where stated:
 
@@ -96,15 +91,8 @@ Several other Node NPM libraries are used as dependencies. Their source is not i
 - [wait.for](https://www.npmjs.com/package/wait.for) by luciotato, for turning async functions into sync functions
 - [moment](https://www.npmjs.com/package/moment) by ichernev and [moment-timezone](https://www.npmjs.com/package/moment-timezone) by maggiepint, for better date handling, formatting and time zone adjustment
 
-## Disclaimer
-
-We are not required to supply terms because we are not running a service. However, obviously you are at your own liability if you use this software. See [the license](/LICENSE) for full legal text.
-
-Contributions via pull request are very welcome, as are issues logged via the GitHub issue tracker. You can also suggest features, such as metrics you'd like to see, UI upgrades, etc.
-
-Finally, as mentioned in the [discussion](/docs/discussion.md), this project is not intended as a customer ready solution, it is a kind of "hobby grade" project. As such, **do not expect consumer level support**..
-
 ## Changelog
 
 - v0.0.1
   - Merge 'develop' branch from Foss bot to master branch of prosper-ai-node.
+  - Update Readme.md to reflect the Prosper-ai project and not Fossbot.
