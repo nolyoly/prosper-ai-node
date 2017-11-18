@@ -3,14 +3,11 @@
   "description": "A curation bot built for the Steemit social media platform, decides which posts to vote for and casts vote on behalf of a registered user",
   "repository": "https://github.com/Steem-FOSSbot/steem-fossbot-voter",
   "keywords": ["node", "foss", "server", "steemit", "curation", "voting"],
-  "addons": ["scheduler:standard", "sendgrid:starter", "heroku-redis:hobby-dev"],
+  "addons": ["scheduler:standard", "mongolab"],
   "env": {
   	"STEEM_USER": "",
   	"POSTING_KEY_PRV": "",
   	"BOT_API_KEY": "",
-  	"EMAIL_ADDRESS_TO": "none",
-  	"EMAIL_ADDRESS_SENDER": "none",
-  	"SENDGRID_API_KEY": "none",
     "COOKIE_SECRET": "pk7uKiAbQHcVxNBLQVnBwbwd",
     "VERBOSE_LOGGING": "false"
   }
