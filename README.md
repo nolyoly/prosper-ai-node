@@ -4,7 +4,7 @@
 
 A Steem bot, by [personz](https://steemit.com/@personz)
 
-Forked and edited by me [Nolyoly]{https://steemit.com/@noly)
+Forked and development continuation by me/[Nolyoly](https://steemit.com/@noly)
 
 ## Project goal
 
