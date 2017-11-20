@@ -1,3 +1,4 @@
+![](https://steemitimages.com/600x800/https://res.cloudinary.com/hpiynhbhq/image/upload/v1511153045/w8gocohjfgndgxqu4lex.png)
 # Prosper-ai Upvote/Curation Bot
 A Steem bot, by [personz](https://steemit.com/@personz)
 
